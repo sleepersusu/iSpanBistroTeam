@@ -146,7 +146,6 @@ button{
     margin: 2%;
     
 }
-
 /* main sectiontop CSS設定結束 ----------*/
 
 /* main sectiontop CSS設定開始 ----------*/
@@ -158,7 +157,6 @@ button{
     flex-wrap: wrap;
     margin: 2%;
 }
-
 /* main sectionmiddle CSS設定結束 ----------*/
 
 /* main sectionbottom CSS設定開始 ----------*/
@@ -219,7 +217,6 @@ tbody tr:last-child td{
 
 /* main sectionbottom CSS設定結束 ----------*/
 
-
 /* 統計圖 CSS 開始 */
 /* 折線圖 */
 .linechart{
@@ -250,9 +247,4 @@ tbody tr:last-child td{
     font-size: 0.1em;
 }
 /* main mainfooter 商標 CSS設定結束 ----------*/
-
-
-
-
-
 

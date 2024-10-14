@@ -8,7 +8,7 @@
 }
 
 
-/* 側邊欄CSS設定開始 */
+/* 側邊欄CSS設定開始 ----------------------*/
 .sidebar {
     position: fixed;
     background-color: #424242;
@@ -89,9 +89,10 @@
     background-color: rgb(239, 0, 0);
 }
 
-/* 側邊欄CSS設定結束 */
+/* 側邊欄CSS設定結束 ---------------------*/
 
 
+/* 右欄 畫面長寬CSS設定開始 --------------*/
 #right{
     height: 100%;
     display: flex;
@@ -109,6 +110,15 @@
     }
 }
 
+main{
+    padding:1%;
+    background-color:lightgray;
+    align-items: center;
+    top: 30px;
+}
+/* 右欄 畫面長寬CSS設定結束 ---------------*/
+
+/* main header 登出 CSS設定開始 ----------*/
 header{
     background-color: white;
     height: 30px;
@@ -122,18 +132,12 @@ header>button{
     margin-right: 50px;
 }
 
-main{
-    padding:1%;
-    background-color:lightgray;
-    align-items: center;
-    top: 30px;
-}
-
 button{
     cursor: pointer;
 }
+/* main header 登出 CSS設定結束 ----------*/
 
-
+/* main sectiontop CSS設定開始 ----------*/
 .sectiontop{
     height: 25%;
     display:flex;
@@ -142,7 +146,9 @@ button{
     margin: 2%;
     
 }
+/* main sectiontop CSS設定結束 ----------*/
 
+/* main sectiontop CSS設定開始 ----------*/
 .sectionmiddle{
     height: 25%;
     display: flex;
@@ -151,37 +157,18 @@ button{
     flex-wrap: wrap;
     margin: 2%;
 }
+/* main sectionmiddle CSS設定結束 ----------*/
 
+/* main sectionbottom CSS設定開始 ----------*/
 .sectionbottom{
     height: 25%;
     margin: 2%;
 }
-
-.mainfooter{
-    text-align: center;
-    font-size: 0.1em;
-}
-.sectiontop img{
-    padding: 10px;
-    min-width: 40%;
-    height: 300px;
-    border-radius: 20px;
-}
-
-.sectionmiddle img{
-    padding: 10px;
-    max-width: 40%;
-    height: 300px;
-    border-radius: 20px;
-}
-
-
+/* 評論星數table CSS 開始 */
 table{
     background-color: white;
     border-collapse: collapse;
     border-radius: 10px;
-    outline: 1px solid gray;
-    
 }
 
 thead {
@@ -189,6 +176,7 @@ thead {
     width: 100%;
     table-layout: fixed;
     width: calc(100% - 1em);
+    border-bottom: 1px solid lightgray;
 }
 
 tbody {
@@ -207,7 +195,9 @@ tbody tr {
 
 th,td{
     text-align: left;
-    border: 1px solid black;
+    border-bottom: 1px solid lightgray;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 th:first-child,td:first-child{
@@ -223,5 +213,38 @@ thead tr:first-child th:first-child{
 tbody tr:last-child td{
     border-bottom: none;
 }
+/* 評論星數table CSS 結束 */
 
+/* main sectionbottom CSS設定結束 ----------*/
+
+/* 統計圖 CSS 開始 */
+/* 折線圖 */
+.linechart{
+    height: 50%;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 15px;
+}
+/* 圓餅圖 */
+.piechart{
+    height: 25%;
+    width: 25%;
+    background-color: #fff;
+    border-radius: 15px;
+}
+/* 長條圖 */
+.barchart{
+    height: 50%;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 15px;
+}
+/* 統計圖 CSS 結束 */
+
+/* main mainfooter 商標 CSS設定開始 ----------*/
+.mainfooter{
+    text-align: center;
+    font-size: 0.1em;
+}
+/* main mainfooter 商標 CSS設定結束 ----------*/
 

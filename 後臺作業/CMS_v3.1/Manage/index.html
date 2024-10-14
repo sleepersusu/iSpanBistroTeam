@@ -12,6 +12,13 @@
   </head>
 
   <body>
+    <!-------------- JavaScript引入API套件 開始 ------------------>
+    <!-- char.js 統計圖套件 -->
+    <script src="./api/chart.js"></script>
+    <!-- char.js 擴充套件【資料數值顯示字體在圖上】 -->
+    <script src="./api/chartjs-plugin-datalabels.js"></script>
+    <!-------------- JavaScript引入API套件 結束 ------------------->
+
     <div id="page">
       <!-- 側邊欄開始 -->
       <nav class="sidebar">
@@ -29,15 +36,16 @@
               <span>商品管理</span>
             </a>
           </li>
-          <!--需要下拉的li-->
+          <!-- ↓↓↓↓↓ 需要下拉的li ↓↓↓↓ -->
           <li class="menuitem">
             <a href="#">
               <i class="fa-solid fa-address-card"></i>
               <span>會員管理</span>
             </a>
-            <!--下拉選項位置-->
+            <!--下拉選項內容開始-->
             <ul class="dropdown">
               <li>
+                <!--下拉選項內容-->
                 <a href="./member/memberManage.html">
                   <span>會員資訊</span>
                 </a>
@@ -118,13 +126,21 @@
         </header>
         <main>
           <section class="sectiontop">
-            <img src="./共同img/趨勢.png" alt=""/>
-            <img src="./共同img/日期.png" alt=""/>
+            <!-- 折現圖 -->
+            <div class="linechart">
+              <!-- 用<cavas>標籤繪圖 -->
+              <canvas id="linechart"></canvas>
+            </div>
           </section>
           <section class="sectionmiddle">
-            <img src="./共同img/圓餅.png" alt=""/>
-
-            <img src="./共同img/長條.png" alt=""/>
+            <!-- 圓餅圖 -->
+            <div class="piechart">
+              <canvas id="piechart"></canvas>
+            </div>
+            <div class="barchart">
+              <!-- 長條圖 -->
+              <canvas id="barchart"></canvas>
+            </div>
           </section>
 
           <section class="sectionbottom">
@@ -134,48 +150,48 @@
                   <th colspan="3">訂單&評分</th>
                 </tr>
                 <tr>
-                  <th>訂單ID</th>
-                  <th>菜品名稱</th>
+                  <th>餐點名稱</th>
+                  <th>餐點照片</th>
                   <th>評分</th>
                 </tr>
               </thead>
 
               <tbody>
                 <tr id="1">
-                  <td>1</td>
                   <td>紫蘇梅雞肉卷沙拉</td>
+                  <td>images</td>
                   <td>★★★★★</td>
                 </tr>
                 <tr id="2">
-                  <td>1</td>
                   <td>紫蘇梅雞肉卷沙拉</td>
+                  <td>images</td>
                   <td>★★★★★</td>
                 </tr>
                 <tr id="3">
-                  <td>1</td>
                   <td>紫蘇梅雞肉卷沙拉</td>
+                  <td>images</td>
                   <td>★★★★★</td>
                 </tr>
                 <tr id="4">
-                  <td>1</td>
                   <td>紫蘇梅雞肉卷沙拉</td>
+                  <td>images</td>
                   <td>★★★★★</td>
                 </tr>
                 <tr id="5">
-                  <td>1</td>
                   <td>紫蘇梅雞肉卷沙拉</td>
+                  <td>images</td>
                   <td>★★★★★</td>
                 </tr>
                 <tr id="6">
-                  <td>1</td>
                   <td>紫蘇梅雞肉卷沙拉</td>
+                  <td>images</td>
                   <td>★★★★★</td>
                 </tr>
               </tbody>
             </table>
           </section>
           <footer class="mainfooter">
-            <hr>
+            <hr />
             <span>Made by TeamWork</span>
           </footer>
         </main>
@@ -183,6 +199,7 @@
     </div>
 
     <script>
+      /* 登出按鈕 START */
       let buttons = document.querySelectorAll("button");
       buttons.forEach(function (btn) {
         btn.addEventListener("mouseenter", function () {
@@ -197,21 +214,107 @@
           this.style.scale = "1";
         });
       });
+      /* 登出按鈕 END */
 
-      document
-        .getElementById("search")
-        .addEventListener("mouseenter", function () {
-          this.style.backgroundColor = "pink";
-          this.style.color = "black";
-          this.style.scale = "1.1";
-        });
-      document
-        .getElementById("search")
-        .addEventListener("mouseleave", function () {
-          this.style.backgroundColor = "deepskyblue";
-          this.style.color = "white";
-          this.style.scale = "1";
-        });
+      /* 統計圖套件撰寫 開始-------------------- */
+      /* 
+    pie.data.datasets[0].data[2] = 50; // 先修改資料
+    pie.update(); // 再調用更新
+    pie.resize(); // 根據父元素調整畫布尺寸
+    pie.resize(width, height); // 自訂調整畫布尺寸
+    pie.destroy();銷毀圖表
+    */
+      /* 圓餅圖JS START */
+      let piechart = document.getElementById("piechart");
+
+      let piechartdata = {
+        labels: ["男生", "女生"],
+        datasets: [
+          {
+            label: "國中人數",
+            data: [420, 380],
+          },
+        ],
+      };
+      // 創建圓餅圖
+      let pie = new Chart(piechart, {
+        type: "doughnut",
+        data: piechartdata,
+        plugins: [ChartDataLabels], // 加入套件
+        datalabels: {
+          color: "#000", // 數值顏色
+          anchor: "end", // 數值位置 center, start, end
+          align: "start", // 對齊位置 center, start, end
+        },
+      });
+      /* 圓餅圖JS END */
+
+      /* 折線圖JS START */
+      let linechart = document.getElementById("linechart");
+      let linechartdata = {
+        labels: [
+          "星期一",
+          "星期二",
+          "星期三",
+          "星期四",
+          "星期五",
+          "星期六",
+          "星期日",
+        ],
+        datasets: [
+          {
+            label: "參加人數",
+            data: [160, 130, 140, 160, 170, 200, 180],
+          },
+        ],
+      };
+      // 創建折線圖
+      let line = new Chart(linechart, {
+        type: "line",
+        data: linechartdata,
+        plugins: [ChartDataLabels], // 加入套件
+        datalabels: {
+          color: "#000", // 數值顏色
+          anchor: "end", // 數值位置 center, start, end
+          align: "start", // 對齊位置 center, start, end
+        },
+      });
+      /* 折線圖JS END */
+
+      /* 長條圖JS START */
+      let barchart = document.getElementById("barchart");
+      // 創建長條圖
+      let barchartdata = {
+        labels: ["國一", "國二", "國三"],
+        datasets: [
+          {
+            label: "男生",
+            data: [150, 130, 140],
+            backgroundColor: "#9BD0F5", //修改資料背景顏色
+          },
+          {
+            label: "女生",
+            data: [120, 160, 100],
+            backgroundColor: "#000", //修改資料背景顏色
+          },
+        ],
+      };
+      let bar = new Chart(barchart, {
+        type: "bar",
+        data: barchartdata,
+        options: {
+          categoryPercentage: 1, // 分類比例
+          barPercentage: 0.2, // 柱狀比例
+        },
+        plugins: [ChartDataLabels], // 加入套件
+        datalabels: {
+          color: "#000", // 數值顏色
+          anchor: "end", // 數值位置 center, start, end
+          align: "start", // 對齊位置 center, start, end
+        },
+      });
+      /* 長條圖JS END */
+      /* 統計圖套件撰寫 結束----------------- */
     </script>
   </body>
 </html>
