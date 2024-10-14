@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>index</title>
+
+</head>
+
+<body>
+    <div id="page">
+        <nav>
+            <div id="logo"><img src="../共同img/LOGO.png" alt="商店logo"></div>
+            <ul>
+                <a href="#"><li><i class="fa-solid fa-house" style="color: #ffffff;"></i> 首頁</li></a>
+                <a href="../menu/menu01.html"><li><i class="fa-solid fa-whiskey-glass"></i> 商品管理</li></a>
+                <a href="../member/memberManage.html"><li><i class="fa-solid fa-address-card"></i> 會員管理</li></a>
+                <a href="../booking/booking.html"><li><i class="fa-regular fa-calendar-check"></i> 訂位管理</li></a>
+                <a href=""><li><i class="fa-regular fa-clipboard"></i> 訂單管理</li></a>
+                <a href=""><li><i class="fa-regular fa-face-laugh-squint"></i> 活動管理</li></a>
+                <a href=""><li><i class="fa-solid fa-cart-flatbed"></i> 採購管理</li></a>
+                <a href="../comment/commentManage.html"><li><i class="fa-solid fa-comment"></i> 評論管理</li></a>
+                <a href=""><li><i class="fa-solid fa-user"></i>管理者系統</li></a>
+            </ul>
+        </nav>
+        <div id="right">
+            <header>
+                <button>登出</button>
+            </header>
+            <main>
+                
+                <section class="sectiontop">
+                        <img src="./img/趨勢.png">
+                        <img src="./img/日期.png">
+                </section>
+                <section class="sectionmiddle">
+
+                        <img src="./img/圓餅.png">
+
+                        <img src="./img/長條.png">
+
+                </section>
+
+                <section class="sectionbottom">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="3">訂單&評分</th>
+                                </tr>
+                                <tr>
+                                        <th>訂單ID</th>
+                                        <th>菜品名稱</th>
+                                        <th>評分</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr id="1">
+                                    <td>1</td>
+                                    <td>紫蘇梅雞肉卷沙拉</td>
+                                    <td>★★★★★</td>
+                                </tr>
+                                <tr id="2">
+                                    <td>1</td>
+                                    <td>紫蘇梅雞肉卷沙拉</td>
+                                    <td>★★★★★</td>
+                                </tr>
+                                <tr id="3">
+                                    <td>1</td>
+                                    <td>紫蘇梅雞肉卷沙拉</td>
+                                    <td>★★★★★</td>
+                                </tr>
+                                <tr id="4">
+                                    <td>1</td>
+                                    <td>紫蘇梅雞肉卷沙拉</td>
+                                    <td>★★★★★</td>
+                                </tr>
+                                <tr id="5">
+                                    <td>1</td>
+                                    <td>紫蘇梅雞肉卷沙拉</td>
+                                    <td>★★★★★</td>
+                                </tr>
+                                <tr id="6">
+                                    <td>1</td>
+                                    <td>紫蘇梅雞肉卷沙拉</td>
+                                    <td>★★★★★</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </section>
+                <section class="sectionend">
+                    <hr/>
+                    <footer>© 2024 All Rights Reserved.</footer>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        let buttons = document.querySelectorAll("button");
+        buttons.forEach(function (btn) {
+            btn.addEventListener("mouseenter", function () {
+                this.style.backgroundColor = "gray";
+                this.style.color = "white"
+                this.style.scale = "1.1";
+            })
+
+            btn.addEventListener("mouseleave", function () {
+                this.style.backgroundColor = "white";
+                this.style.color = "black"
+                this.style.scale = "1";
+            })
+
+        })
+
+        document.getElementById("search").addEventListener("mouseenter", function () {
+            this.style.backgroundColor = "pink";
+            this.style.color = "black"
+            this.style.scale = "1.1";
+        })
+        document.getElementById("search").addEventListener("mouseleave", function () {
+            this.style.backgroundColor = "deepskyblue";
+            this.style.color = "white"
+            this.style.scale = "1";
+        })
+
+    </script>
+</body>
+
+</html>

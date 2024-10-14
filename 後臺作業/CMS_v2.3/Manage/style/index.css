@@ -1,0 +1,258 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+#page {
+    display: flex;
+}
+
+
+/* 側邊欄CSS設定開始 ----------------------*/
+.sidebar {
+    position: fixed;
+    background-color: #424242;
+    width: 15%;
+    min-width: 140px;
+    height: 100%;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 1;
+
+}
+
+#logo{
+    margin-top: 20px;
+}
+
+.menu{
+    list-style-type: none;
+    padding: 0;
+}
+.menuitem{
+    color: #271717;
+    padding: 0;
+    margin: 0;
+}
+
+.menuitem a{
+    height: 100%;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+.menuitem a > span{
+    padding: 2px;
+}
+
+.menuitem > a:hover{
+    background-color: gray;
+    scale: 1.1;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5px;
+}
+.menuitem > a:active{
+    background-color: rgb(239, 0, 0);
+}
+.menuitem:hover .dropdown {
+    display: block;
+    height: auto;
+    max-height: 500px;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+}
+
+.dropdown {
+    display: block;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background-color: #5e5e5e;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+    
+}
+
+.dropdown a:hover{
+    background-color: rgb(155, 155, 155);
+    scale: 1.1;
+    border-radius: 5px;
+}
+
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+}
+.dropdown a:active{
+    background-color: rgb(239, 0, 0);
+}
+
+/* 側邊欄CSS設定結束 ---------------------*/
+
+
+/* 右欄 畫面長寬CSS設定開始 --------------*/
+#right{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    position: relative;
+    left: 15%;
+    
+}
+/* 螢幕寬度小於980px時執行下面 */
+@media all and (max-width:980px){
+    #right{
+        position: relative;
+        left: 140px;
+    }
+}
+
+main{
+    padding:1%;
+    background-color:lightgray;
+    align-items: center;
+    top: 30px;
+}
+/* 右欄 畫面長寬CSS設定結束 ---------------*/
+
+/* main header 登出 CSS設定開始 ----------*/
+header{
+    background-color: white;
+    height: 30px;
+    text-align: end;
+    width: 85%;
+    position: fixed;
+    align-content: center;
+}
+
+header>button{
+    margin-right: 50px;
+}
+
+button{
+    cursor: pointer;
+}
+/* main header 登出 CSS設定結束 ----------*/
+
+/* main sectiontop CSS設定開始 ----------*/
+.sectiontop{
+    height: 25%;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2%;
+    
+}
+
+/* main sectiontop CSS設定結束 ----------*/
+
+/* main sectiontop CSS設定開始 ----------*/
+.sectionmiddle{
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2%;
+}
+
+/* main sectionmiddle CSS設定結束 ----------*/
+
+/* main sectionbottom CSS設定開始 ----------*/
+.sectionbottom{
+    height: 25%;
+    margin: 2%;
+}
+/* 評論星數table CSS 開始 */
+table{
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+}
+
+thead {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    width: calc(100% - 1em);
+    border-bottom: 1px solid lightgray;
+}
+
+tbody {
+    height: 100px;
+    display: block;
+    overflow: auto;
+    
+}
+
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    
+}
+
+th,td{
+    text-align: left;
+    border-bottom: 1px solid lightgray;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+th:first-child,td:first-child{
+    border-left:none ;
+}
+th:last-child,td:last-child{
+    border-right:none ;
+}
+
+thead tr:first-child th:first-child{
+    border-top: none;
+}
+tbody tr:last-child td{
+    border-bottom: none;
+}
+/* 評論星數table CSS 結束 */
+
+/* main sectionbottom CSS設定結束 ----------*/
+
+
+/* 統計圖 CSS 開始 */
+/* 折線圖 */
+.linechart{
+    height: 50%;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 15px;
+}
+/* 圓餅圖 */
+.piechart{
+    height: 25%;
+    width: 25%;
+    background-color: #fff;
+    border-radius: 15px;
+}
+/* 長條圖 */
+.barchart{
+    height: 50%;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 15px;
+}
+/* 統計圖 CSS 結束 */
+
+/* main mainfooter 商標 CSS設定開始 ----------*/
+.mainfooter{
+    text-align: center;
+    font-size: 0.1em;
+}
+/* main mainfooter 商標 CSS設定結束 ----------*/
+
+
+
+
+
+

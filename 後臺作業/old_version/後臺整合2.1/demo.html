@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./demo.css" />
+</head>
+
+<body>
+<div id="page">
+    <nav>
+        <div id="logo"><img src="" alt="商店logo" /></div>
+        <ul>
+        <a href=""><li><i class="fa-solid fa-house" style="color: #ffffff"></i> 首頁</li></a>
+        <a href="../menu/menu01.html"><li><i class="fa-solid fa-whiskey-glass"></i> 商品管理</li></a >
+        <a href="#"><li><i class="fa-solid fa-address-card"></i> 會員管理</li></a>
+        <a href=""><li><i class="fa-regular fa-calendar-check"></i> 訂位管理</li></a>
+        <a href=""><li><i class="fa-regular fa-clipboard"></i> 訂單管理</li></a>
+        <a href=""><li><i class="fa-regular fa-face-laugh-squint"></i> 活動管理</li></a>
+        <a href=""><li><i class="fa-solid fa-cart-flatbed"></i> 採購管理</li></a>
+        <a href="../comment/commentManage.html" ><li><i class="fa-solid fa-comment"></i> 評論管理</li></a>
+        <a href=""><li><i class="fa-solid fa-user"></i>管理者系統</li></a>
+        </ul>
+    </nav>
+    <div id="right"> <!-- 整個右半部-->
+        <header><!--登出區-->
+            <button>登出</button>
+        </header>
+
+        <main><!-- 按鈕區+搜尋區+資料區-->
+            <h1>xx管理</h1>
+        <section id="upSection"> <!-- 按鈕區+搜尋區-->
+
+            <div id="workspace" ><!-- 按鈕區-->
+                <button class="dataButton"><i class="fa-solid fa-square-plus"></i>  增加資料</button>
+                    <button class="dataButton" ><i class="fa-solid fa-trash"></i>  刪除資料</button>
+                    <button class="dataButton"><i class="fa-solid fa-pen-to-square"></i>  修改資料</button>
+            </div><!-- 按鈕區-->
+
+            <h3 id="searchTitle">搜尋</h3>
+            <div id="searchBar"><!-- 搜尋區-->
+                <input type="text" placeholder="請輸入內容" id="searchinput">
+                    <button id="search"><i class="fa-solid fa-magnifying-glass"></i>  搜尋</button>
+            </div><!-- 搜尋區-->
+        </section><!-- 按鈕區+搜尋區-->
+
+
+        <section id="data"> <!--資料區-->
+            <div id="selected"><!--顯示選取多少-->
+                <div> 
+                    <span>已選取  : 0</span>
+                    <button>選取全部</button>
+                    <button>取消全選</button>
+                </div>
+            </div><!--顯示選取多少-->
+
+            
+            <form action="#" method="post" enctype="application/x-www-form-urlencoded"> 
+                <table>
+                <thead>
+                    <tr>
+                        <th>選項</th>
+                        <th>id</th>
+                        <th>帳號</th>
+                        <th>密碼</th>
+                        <th>姓名</th>
+                        <th>性別</th>
+                        <th>生日</th>
+                        <th>興趣</th>
+                        <th>地址</th>
+                        <th>聯絡電話</th>
+                        <th>電子信箱</th>
+                        <th>會員圖片</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                        <label for=""></label>
+                            <input type="checkbox" name="member" value="abcdeghij123"/>
+                        </td>
+                        <td>1</td>
+                        <td>abcdeghij123</td>
+                        <td>abcdeghij123password</td>
+                        <td>tom</td>
+                        <td>0</td>
+                        <td>2000-01-01</td>
+                        <td>0</td>
+                        <td>Taipei</td>
+                        <td>0999999999</td>
+                        <td>ABC@gmail.com</td>
+                        <td><img src="" alt="" /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="menu"></label>
+                        <input type="checkbox" name="member" value="ABC" />
+                        </td>
+                        <td>1</td>
+                        <td>ABC</td>
+                        <td>ABC</td>
+                        <td>tom</td>
+                        <td>0</td>
+                        <td>2000-01-01</td>
+                        <td>0</td>
+                        <td>Taipei</td>
+                        <td>0999999999</td>
+                        <td>ABC@gmail.com</td>
+                        <td><img src="" alt="" /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <label for=""></label>
+                            <input type="checkbox" name="member" value="ABC" />
+                        </td>
+                        <td>1</td>
+                        <td>ABC</td>
+                        <td>ABC</td>
+                        <td>tom</td>
+                        <td>0</td>
+                        <td>2000-01-01</td>
+                        <td>0</td>
+                        <td>Taipei</td>
+                        <td>0999999999</td>
+                        <td>ABC@gmail.com</td>
+                        <td><img src="" alt="" /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for=""></label>
+                            <input type="checkbox" name="member" value="ABC" />
+                        </td>
+                        <td>1</td>
+                        <td>ABC</td>
+                        <td>ABC</td>
+                        <td>tom</td>
+                        <td>0</td>
+                        <td>2000-01-01</td>
+                        <td>0</td>
+                        <td>Taipei</td>
+                        <td>0999999999</td>
+                        <td>ABC@gmail.com</td>
+                        <td><img src="" alt="" /></td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <label for=""></label>
+                            <input type="checkbox" name="member" value="ABC" />
+                        </td>
+                        <td>1</td>
+                        <td>ABC</td>
+                        <td>ABC</td>
+                        <td>tom</td>
+                        <td>0</td>
+                        <td>2000-01-01</td>
+                        <td>0</td>
+                        <td>Taipei</td>
+                        <td>0999999999</td>
+                        <td>ABCDEFG123123@gmail.com</td>
+                        <td><img src="" alt="" /></td>
+                    </tr>
+                    </tbody>
+
+
+            </table>
+            </form>
+            
+                    <div>
+                        <ul  id="changePage">
+                            <a href="" ><li class="pageNumber">前五頁</li></a>
+                            <a href=""><li class="pageNumber">1</li></a>
+                            <a href=""><li class="pageNumber">2</li></a>
+                            <a href=""><li class="pageNumber">3</li></a>
+                            <a href="" ><li class="pageNumber">後五頁</li></a>
+                        </ul>
+                    </div>
+
+        </section><!--資料區-->
+
+        </main> <!-- 按鈕區+搜尋區+table 放置區-->
+    </div> <!-- 整個右半部-->
+
+
+    </div> <!-- 整個版面-->
+
+    <script>
+        let buttons = document.querySelectorAll("button");
+        buttons.forEach(function (btn) {
+            btn.addEventListener("mouseenter", function () {
+                this.style.backgroundColor = "gray";
+                this.style.boxShadow="5px 5px 5px gray";
+                this.style.color = "white";
+                this.style.scale = "1.1";
+        });
+    
+            btn.addEventListener("mouseleave", function () {
+                this.style.backgroundColor = "white";
+                this.style.boxShadow="none";
+                this.style.color = "black";
+                this.style.scale = "1";
+            });
+        });
+    
+        document.getElementById("search").addEventListener("mouseenter", function () {
+            this.style.backgroundColor = "pink";
+            this.style.boxShadow="5px 5px 5px gray";
+            this.style.color = "black";
+            this.style.scale = "1.1";
+        });
+        document.getElementById("search").addEventListener("mouseleave", function () {
+            this.style.backgroundColor = "deepskyblue";
+            this.style.boxShadow="none";
+            this.style.color = "white";
+            this.style.scale = "1";
+        });
+    </script>
+</body>
+</html>

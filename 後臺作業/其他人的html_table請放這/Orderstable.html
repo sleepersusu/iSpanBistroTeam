@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>訂單系統後台</title>
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      aside {
+        background-color: gray;
+        width: 200px;
+        height: 100vh;
+        text-align: center;
+      }
+      aside ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      aside ul li {
+        color: #fff;
+        padding: 10px;
+      }
+      .box {
+        display: flex;
+        width: 100%;
+      }
+      .logo {
+        padding: 20px;
+        text-align: center;
+      }
+      .logo img {
+        max-width: 100%;
+      }
+      .main-content {
+        flex-grow: 1;
+        padding: 20px;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .search-bar {
+        display: flex;
+      }
+      .search-bar input {
+        padding: 5px;
+        width: 200px;
+      }
+      .search-bar button {
+        padding: 5px 10px;
+      }
+    </style>
+  </head>
+  <link rel="icon" href="./IMG/favicon (1).ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="./IMG/favicon (1).ico" type="image/x-icon" />
+  <body>
+    <div class="box">
+      <aside>
+        <div class="logo">
+          <img src="./IMG/1728884599356.jpg" alt="Logo" />
+        </div>
+        <ul>
+          <li>會員系統</li>
+          <li>訂單系統</li>
+          <li>訂單明細</li>
+          <li>訂位系統</li>
+          <li>服務系統</li>
+        </ul>
+      </aside>
+      <div class="main-content">
+        <div class="header">
+          <h1>訂單系統</h1>
+          <div class="search-bar">
+            <input type="text" placeholder="搜尋..." />
+            <button type="submit">搜尋</button>
+          </div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>選取</th>
+              <th>狀態</th>
+              <th>ID</th>
+              <th>會員ID</th>
+              <th>桌號</th>
+              <th>訂單日期</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>已付款</td>
+              <td>ORD-20241007-000001</td>
+              <td>0001</td>
+              <td>1</td>
+              <td>2024-10-07 17:42:00</td>
+            </tr>
+            <!-- 可以根據需要添加更多行 -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

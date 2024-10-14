@@ -1,0 +1,312 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Noto Sans TC", serif;
+}
+
+#page {
+    display: flex;
+}
+
+/* 側邊欄CSS設定開始 */
+.sidebar {
+    position: fixed;
+    background-color: #424242;
+    width: 15%;
+    min-width: 140px;
+    height: 100%;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 1;
+
+}
+#logo{
+    margin-top: 20px;
+}
+
+.menubox{
+    text-align: left;
+    margin: auto;
+    width: 50%;
+    font-size: 18px;
+    
+}
+.menu{
+    list-style-type: none;
+    padding: 0;
+}
+.menuitem{
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.menuitem a{
+    height: 100%;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+.menuitem a > span{
+    
+    padding: 2px;
+}
+
+.menuitem > a:hover{
+    background-color: gray;
+    scale: 1.1;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5px;
+    
+}
+.menuitem > a:active{
+    background-color: rgb(239, 0, 0);
+}
+.menuitem:hover .dropdown{
+    display: block;
+    
+}
+
+
+
+.dropdown{
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background-color: #5e5e5e;
+}
+.dropdown  a:hover{
+    background-color: rgb(155, 155, 155);
+    scale: 1.1;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5px;
+}
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+}
+.dropdown a:active{
+    background-color: rgb(239, 0, 0);
+}
+
+/* 側邊欄CSS設定結束 */
+
+#right{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    position: relative;
+    left: 15%;
+
+}
+/* 螢幕寬度小於980px時執行下面 */
+@media all and (max-width:980px){
+    #right{
+        position: relative;
+        left: 140px;
+    }
+}
+
+header{
+    background-color: white;
+    height: 30px;
+    text-align: end;
+    width: 85%;
+    position: fixed;
+    align-content: center;
+    
+}
+
+header button{
+    margin-right: 50px;
+}
+
+
+h2{
+    margin-top: 10px;
+}
+
+main{
+    padding-left: 100px;
+    padding-right: 0px;
+    background-color:lightgray;
+    position: relative;
+    top: 30px;
+    height: 100vh;
+}
+
+#upSection{
+    border: rgb(213, 211, 211) 2px solid;
+    margin: 20px 0px ;
+    width: 90%;
+    border-radius: 5px;
+    background-color: white;
+    
+    
+}
+
+#workspace{
+    border-bottom: solid rgb(213, 211, 211) 2px;
+    padding:  10px 0px 10px 0px;
+}
+
+button{
+    cursor: pointer;
+}
+.dataButton{
+    background-color: #fff;
+    width: 100px;
+    height: 25px;
+    border-radius: 3px 3px 3px 3px;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* #searchTitle{    
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#searchBar{
+    display: flex;
+    margin-left: 10px;
+    margin-bottom:10PX;
+}
+
+#searchinput{
+    height: 20px;
+    width: 400px;
+}
+
+#search{
+    width: 100px;
+    height: 25px;
+    background-color:deepskyblue;
+    color: white;
+    border-radius: 3px 3px 3px 3px;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: bold;
+    border: none;
+} */
+#selected{
+    display: flex;
+}
+
+#selectAll,#reset{
+border: none;
+font-weight: bold;
+font-size: 16px;
+background-color: transparent;
+margin-left: 10px;
+}
+#selectAll:hover,#reset:hover{
+    text-decoration: underline;
+    color: #0071e3;
+}
+
+#selectTypes{
+    width: 200px;
+
+}
+
+#data{
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 5px;
+    table-layout: fixed;
+
+}
+
+
+
+
+section:last-child{
+    border-bottom: none;
+}
+
+table.dataTable tr td{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#data img{
+    width: 80px;
+    height: 100px;;
+} 
+/* <!-- 表格內照片-->  */
+
+
+/* <!--可以按的按鈕-->  */
+div.dt-container .dt-paging .dt-paging-button {  
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 1.5em;
+    padding: 0.5em 1em;
+    margin-left: 2px;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    border: 1px solid ;
+    border-radius: 2px;
+
+}
+
+
+.dt-layout-cell.dt-layout-end{
+    margin-right: 400px;
+}/* 搜尋區容器 */
+
+div.dt-container .dt-search input{ 
+    background-color: #fff;
+}/* 搜尋輸入區 */
+
+div.dt-container .dt-input{ 
+    background-color: #fff;
+}/* 下拉表單 */
+
+
+
+
+.dt-layout-cell dt-layout-end{
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+div.dt-container .dt-paging .dt-paging-button.current, div.dt-container .dt-paging .dt-paging-button.current:hover {
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background: linear-gradient(to top, gray 5%, white 80%); 
+    /* 修改當前業數按鈕顏色 */
+}
+
+thead tr{
+    width: 100%;
+}
+
+.mainfooter{
+    text-align: center;
+    font-size: 0.1em;
+}
+
+
+table.dataTable th.dt-type-numeric, table.dataTable th.dt-type-date,
+table.dataTable td.dt-type-numeric,
+table.dataTable td.dt-type-date,table.dataTable th.dt-right, table.dataTable td.dt-right
+{
+text-align: left;
+}
+
+

@@ -1,0 +1,322 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+#page {
+    display: flex;
+}
+
+/* 側邊欄CSS設定開始 */
+.sidebar {
+    position: fixed;
+    background-color: #424242;
+    width: 15%;
+    min-width: 140px;
+    height: 100%;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 1;
+
+}
+#logo{
+    margin-top: 20px;
+}
+
+.menu{
+    list-style-type: none;
+    padding: 0;
+}
+.menuitem{
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.menuitem a{
+    height: 100%;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+.menuitem a > span{
+    padding: 2px;
+}
+
+.menuitem > a:hover{
+    background-color: gray;
+    scale: 1.1;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5px;
+}
+.menuitem > a:active{
+    background-color: rgb(239, 0, 0);
+}
+.menuitem:hover .dropdown{
+    display: block;
+}
+
+.dropdown{
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background-color: #5e5e5e;
+}
+.dropdown  a:hover{
+    background-color: rgb(155, 155, 155);
+    scale: 1.1;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 5px;
+}
+.dropdown li a {
+    color: white;
+    text-decoration: none;
+}
+.dropdown a:active{
+    background-color: rgb(239, 0, 0);
+}
+
+/* 側邊欄CSS設定結束 */
+
+
+
+#right{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    position: relative;
+    left: 15%;
+    
+}
+/* 螢幕寬度小於980px時執行下面 */
+@media all and (max-width:980px){
+    #right{
+        position: relative;
+        left: 140px;
+    }
+}
+
+header{
+    background-color: white;
+    height: 30px;
+    text-align: end;
+    width: 85%;
+    position: fixed;
+    align-content: center;
+}
+
+header button{
+    margin-right: 50px;
+}
+
+main{
+    padding-left: 100px;
+    padding-right: 0px;
+    background-color:lightgray;
+    position: relative;
+    top: 30px;
+}
+
+#upSection{
+    border: rgb(213, 211, 211) 2px solid;
+    margin: 20px 0px ;
+    width: 90%;
+    border-radius: 5px;
+    background-color: white;
+    
+    
+}
+
+#workspace{
+    border-bottom: solid rgb(213, 211, 211) 2px;
+    padding:  10px 0px 10px 0px;
+}
+
+button{
+    cursor: pointer;
+}
+.dataButton{
+    background-color: #fff;
+    width: 100px;
+    height: 25px;
+    border-radius: 3px 3px 3px 3px;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#searchTitle{    
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#searchBar{
+    display: flex;
+    margin-left: 10px;
+    margin-bottom:10PX;
+}
+
+#searchinput{
+    height: 20px;
+    width: 400px;
+}
+
+#search{
+    width: 100px;
+    height: 25px;
+    background-color:deepskyblue;
+    color: white;
+    border-radius: 3px 3px 3px 3px;
+    font-size: 14px;
+    margin-left: 10px;
+    font-weight: bold;
+    border: none;
+}
+#selected{
+    display: flex;
+}
+
+
+#selectTypes{
+    width: 200px;
+    margin-left: 0px;
+}
+
+#data{
+    margin-bottom: 20px;
+}
+
+table{
+    width: 90%;
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 5px;
+    
+    
+}
+
+thead {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tbody {
+    display: block;
+    max-height: 300px;
+    overflow-y: auto;
+    left: 0;
+    
+}
+
+
+
+
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+section:last-child{
+    border-bottom: none;
+}
+
+#data img{
+    width: 80px;
+    height: 100px;
+}
+
+
+th,td{
+    text-align: left;
+    border-bottom: 1px solid gray;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(214, 214, 214);
+}
+
+tbody tr:nth-child(even) {
+    background-color:ghostwhite;
+}
+
+tbody tr:hover {
+    background-color:wheat;
+}
+
+
+thead tr th:first-child,
+tbody tr td:first-child,
+thead tr th:nth-child(2),
+tbody tr td:nth-child(2) {
+    text-align: center;
+    width: 50px;
+}
+
+
+thead tr th:nth-child(3),
+tbody tr td:nth-child(3){
+    text-align: center;
+    width: 90px;
+}
+
+thead tr th:nth-child(4),
+tbody tr td:nth-child(4){
+    text-align: center;
+    width:  50px;
+}
+
+thead tr th:nth-child(5),
+tbody tr td:nth-child(5){
+    text-align: center;
+    width:  50px;
+}
+
+thead tr th:nth-child(6){
+    text-align: left;
+    width:  30px;
+}
+
+
+tbody tr td:nth-child(6){
+    text-align: center;
+    width:  30px;
+}
+
+thead tr th:nth-child(7),
+tbody tr td:nth-child(7){
+    text-align: center;
+    width:  200px;
+}
+
+
+.mainfooter{
+    text-align: center;
+    font-size: 0.1em;
+}
+
+#changePage{
+    display: flex;
+    list-style: none;
+
+}
+
+.pageNumber{
+    padding: 5px;
+    margin: 5px;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+

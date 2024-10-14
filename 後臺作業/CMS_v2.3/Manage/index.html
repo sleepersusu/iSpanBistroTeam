@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <title>index</title>
+</head>
+
+<body>
+  <div id="page">
+    <!-- 側邊欄開始 -->
+    <nav class="sidebar">
+      <div id="logo"><img src="./共同img/LOGO.png" alt="商店logo" /></div>
+      <ul class="menu">
+        <li class="menuitem">
+          <a href="./index.html">
+            <i class="fa-solid fa-house" style="color: #ffffff"> </i>
+            <span>首頁</span>
+          </a>
+        </li>
+        <li class="menuitem">
+          <a href="./menu/menu01.html">
+            <i class="fa-solid fa-whiskey-glass"></i>
+            <span>商品管理</span>
+          </a>
+        </li>
+        <!-- ↓↓↓↓↓ 需要下拉的li ↓↓↓↓ -->
+        <li class="menuitem">
+          <a href="#">
+            <i class="fa-solid fa-address-card"></i>
+            <span>會員管理</span>
+          </a>
+          <!--下拉選項內容開始-->
+          <ul class="dropdown">
+            <li>
+              <!--下拉選項內容-->
+              <a href="./member/memberManage.html">
+                <span>會員資訊</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span>會員優惠</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="menuitem">
+          <a href="./booking/booking.html">
+            <i class="fa-regular fa-calendar-check"></i>
+            <span>訂位管理</span>
+          </a>
+          <!--下拉選項內容開始-->
+          <ul class="dropdown">
+            <li><!--下拉選項內容--></li>
+          </ul>
+        </li>
+        <li class="menuitem">
+          <a href=".">
+            <i class="fa-regular fa-clipboard"></i>
+            <span>訂單管理</span>
+          </a>
+          <!--下拉選項內容開始-->
+          <ul class="dropdown">
+            <li><!--下拉選項內容--></li>
+          </ul>
+        </li>
+        <li class="menuitem">
+          <a href=".">
+            <i class="fa-regular fa-face-laugh-squint"></i>
+            <span>活動管理</span>
+          </a>
+          <!--下拉選項內容開始-->
+          <ul class="dropdown">
+            <li><!--下拉選項內容--></li>
+          </ul>
+        </li>
+        <li class="menuitem">
+          <a href=".">
+            <i class="fa-solid fa-cart-flatbed"></i>
+            <span>採購管理</span>
+          </a>
+          <!--下拉選項內容開始-->
+          <ul class="dropdown">
+            <li><!--下拉選項內容--></li>
+          </ul>
+        </li>
+        <li class="menuitem">
+          <a href="./comment/commentManage.html">
+            <i class="fa-solid fa-comment"></i>
+            <span>評論管理</span>
+          </a>
+          <!--下拉選項內容開始-->
+          <ul class="dropdown">
+            <li><!--下拉選項內容--></li>
+          </ul>
+        </li>
+        <li class="menuitem">
+          <a href=".">
+            <i class="fa-solid fa-user"></i>
+            <span>管理者系統</span>
+          </a>
+          <!--下拉選項內容開始-->
+          <ul class="dropdown">
+            <li><!--下拉選項內容--></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!-- 側邊欄結束 -->
+    <div id="right">
+      <header>
+        <button>登出</button>
+      </header>
+      <main>
+        <section class="sectiontop">
+          <!-- 折現圖 -->
+          <div class="linechart">
+            <!-- 用<cavas>標籤繪圖 -->
+            <canvas id="linechart"></canvas>
+          </div>
+        </section>
+        <section class="sectionmiddle">
+          <!-- 圓餅圖 -->
+          <div class="piechart">
+            <canvas id="piechart"></canvas>
+          </div>
+          <div class="barchart">
+            <!-- 長條圖 -->
+            <canvas id="barchart"></canvas>
+          </div>
+
+
+        </section>
+
+        <section class="sectionbottom">
+          <table>
+            <thead>
+              <tr>
+                <th colspan="3">訂單&評分</th>
+              </tr>
+              <tr>
+                <th>餐點名稱</th>
+                <th>餐點照片</th>
+                <th>評分</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr id="1">
+                <td>紫蘇梅雞肉卷沙拉</td>
+                <td>images</td>
+                <td>★★★★★</td>
+              </tr>
+              <tr id="1">
+                <td>紫蘇梅雞肉卷沙拉</td>
+                <td>images</td>
+                <td>★★★★★</td>
+              </tr>
+              <tr id="1">
+                <td>紫蘇梅雞肉卷沙拉</td>
+                <td>images</td>
+                <td>★★★★★</td>
+              </tr>
+              <tr id="1">
+                <td>紫蘇梅雞肉卷沙拉</td>
+                <td>images</td>
+                <td>★★★★★</td>
+              </tr>
+              <tr id="1">
+                <td>紫蘇梅雞肉卷沙拉</td>
+                <td>images</td>
+                <td>★★★★★</td>
+              </tr>
+              <tr id="1">
+                <td>紫蘇梅雞肉卷沙拉</td>
+                <td>images</td>
+                <td>★★★★★</td>
+              </tr>
+              <tr id="1">
+                <td>紫蘇梅雞肉卷沙拉</td>
+                <td>images</td>
+                <td>★★★★★</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <footer class="mainfooter">
+          <hr>
+          <span>Made by TeamWork</span>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+
+  <!-------------- JavaScript引入API套件 開始 ------------------>
+  <!-- char.js 統計圖套件 -->
+  <script src="./api/chart.js"></script>
+  <!-- char.js 擴充套件【資料數值顯示字體在圖上】 -->
+  <script src="./api/chartjs-plugin-datalabels.js"></script>
+  <!-------------- JavaScript引入API套件 結束 ------------------->
+
+
+  <script>
+    /* 登出按鈕 START */
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach(function (btn) {
+      btn.addEventListener("mouseenter", function () {
+        this.style.backgroundColor = "gray";
+        this.style.color = "white";
+        this.style.scale = "1.1";
+      });
+
+      btn.addEventListener("mouseleave", function () {
+        this.style.backgroundColor = "white";
+        this.style.color = "black";
+        this.style.scale = "1";
+      });
+    });
+    /* 登出按鈕 END */
+
+    /* 統計圖套件撰寫 開始-------------------- */
+    /* 
+    pie.data.datasets[0].data[2] = 50; // 先修改資料
+    pie.update(); // 再調用更新
+    pie.resize(); // 根據父元素調整畫布尺寸
+    pie.resize(width, height); // 自訂調整畫布尺寸
+    pie.destroy();銷毀圖表
+    */
+    /* 圓餅圖JS START */
+    let piechart = document.getElementById('piechart');
+
+    let piechartdata = {
+      labels: [
+        '男生',
+        '女生',
+      ],
+      datasets: [{
+        label: '國中人數',
+        data: [420, 380],
+      }]
+    };
+    // 創建圓餅圖
+    let pie = new Chart(piechart, {
+      type: 'doughnut',
+      data: piechartdata,
+      plugins: [ChartDataLabels], // 加入套件
+      datalabels: {
+        color: "#000",  // 數值顏色
+        anchor: "end", // 數值位置 center, start, end
+        align: 'start', // 對齊位置 center, start, end
+      }
+    });
+    /* 圓餅圖JS END */
+
+    /* 折線圖JS START */
+    let linechart = document.getElementById('linechart');
+    let linechartdata = {
+      labels: [
+        '星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日',
+      ],
+      datasets: [{
+        label: '參加人數',
+        data: [160, 130, 140, 160, 170, 200, 180],
+      }]
+    };
+    // 創建折線圖
+    let line = new Chart(linechart, {
+      type: 'line',
+      data: linechartdata,
+      plugins: [ChartDataLabels], // 加入套件
+      datalabels: {
+        color: "#000",  // 數值顏色
+        anchor: "end", // 數值位置 center, start, end
+        align: 'start', // 對齊位置 center, start, end
+      }
+    });
+    /* 折線圖JS END */
+
+    /* 長條圖JS START */
+    let barchart = document.getElementById('barchart');
+    // 創建長條圖
+    let barchartdata =
+    {
+      labels: ['國一', '國二', '國三'],
+      datasets: [{
+        label: '男生',
+        data: [150, 130, 140],
+        backgroundColor: '#9BD0F5',//修改資料背景顏色
+      }, {
+        label: '女生',
+        data: [120, 160, 100],
+        backgroundColor: '#000',//修改資料背景顏色
+      }]
+    }
+    let bar = new Chart(barchart, {
+      type: 'bar',
+      data: barchartdata,
+      options: {
+        categoryPercentage: 1, // 分類比例
+        barPercentage: 0.2 // 柱狀比例
+      },
+      plugins: [ChartDataLabels], // 加入套件
+      datalabels: {
+        color: "#000",  // 數值顏色
+        anchor: "end", // 數值位置 center, start, end
+        align: 'start', // 對齊位置 center, start, end
+      }
+    });
+    /* 長條圖JS END */
+    /* 統計圖套件撰寫 結束----------------- */
+
+  </script>
+
+
+</body>
+
+</html>

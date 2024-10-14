@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/menu01.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>menu01</title>
+    
+</head>
+<body>
+<div id="page">
+    <nav>
+        <div id="logo"><img src="../共同img/LOGO.png" alt="商店logo"></div>
+        <ul>
+            <a href="../index/index.html"><li><i class="fa-solid fa-house" style="color: #ffffff;"></i>    首頁</li></a>
+            <a href="#"><li><i class="fa-solid fa-whiskey-glass"></i> 商品管理</li></a>
+            <a href="../member/memberManage.html"><li><i class="fa-solid fa-address-card"></i> 會員管理</li></a>
+            <a href="../booking/booking.html"><li><i class="fa-regular fa-calendar-check"></i> 訂位管理</li></a>
+            <a href=""><li><i class="fa-regular fa-clipboard"></i> 訂單管理</li></a>
+            <a href=""><li><i class="fa-regular fa-face-laugh-squint"></i> 活動管理</li></a>
+            <a href=""><li><i class="fa-solid fa-cart-flatbed"></i> 採購管理</li></a>
+            <a href="../comment/commentManage.html"><li><i class="fa-solid fa-comment"></i> 評論管理</li></a>
+            <a href=""><li><i class="fa-solid fa-user"></i>管理者系統</li></a>
+        </ul>
+    </nav>
+<div id="right">
+    <header>
+        <button>登出</button>
+    </header>
+    
+<main>
+    <h1>商品管理</h1>
+        <section id="upSection">
+            <div id="workspace">
+                <button class="dataButton"><i class="fa-solid fa-square-plus"></i>  增加資料</button>
+                <button class="dataButton" ><i class="fa-solid fa-trash"></i>  刪除資料</button>
+                <button class="dataButton"><i class="fa-solid fa-pen-to-square"></i>  修改資料</button>
+            </div>
+            
+            <h3 id="searchTitle" >搜尋</h3>
+            <div id="searchBar">
+                <input type="text" placeholder="請輸入內容" id="searchinput">
+                <button id="search"><i class="fa-solid fa-magnifying-glass"></i>  搜尋</button>
+            </div>
+        </section>
+
+    <section id="data">
+        
+            <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+            <select name="product_types" id="selectTypes">
+                <option selected>選擇餐點樣式</option>
+                <option>推薦</option>
+                <option>主餐</option>
+                <option>點心</option>
+                <option>飲品</option>
+            </select>
+            </form>
+
+            
+            <div id="selected">
+                <div> 
+                    <span>已選取  : 0</span>
+                    <button>選取全部</button>
+                    <button>取消全選</button>
+                </div>
+            </div>
+            
+        <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+            <div>
+            <table>
+                <caption>推薦</caption>
+            <thead>
+                <tr>
+                    <div><th >選項</th></div>
+                    <div><th >ID</th></div>
+                    <div><th >名稱</th></div>
+                    <div><th >圖片</th></div>
+                    <div><th >價格</th></div>
+                    <div><th >分類</th></div>
+                    <div><th  >描述</th></div>         
+                </tr>
+            </thead>
+
+        
+            <tbody>
+                <tr id="1">
+                    <td >
+                        <label for="menu"></label>
+                        <input type="checkbox"  name="menu" value="紫蘇梅雞肉卷沙拉">  
+                    </td>
+                    <td>1</td>
+                    <td>紫蘇梅雞肉卷沙拉</td>
+                    <td><img src="./img/2、紫蘇梅雞肉卷沙拉.jpg" alt="" /></td>
+                    <td>NT$0</td>
+                    <td>推薦</td>
+                    <td>雞腿肉 / 紫蘇梅 / 綜合生菜 / 時令水果</td>
+                
+                </tr>
+                <tr>
+                    <td><label for="menu">
+                    </label><input type="checkbox"  name="menu" value="松花炸肉蛋">
+                    </td>
+                    <td>2</td>
+                    <td>松花炸肉蛋</td>
+                    <td><img src="./img/3、松花炸肉蛋.jpg" alt="" /></td>
+                    <td>NT$0</td>
+                    <td>推薦</td>
+                    <td>皮蛋 / 洋蔥 / Balsamic / 豬絞肉（台灣）</td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="menu"></label>
+                        <input type="checkbox"  name="menu" value="鯤島魚嶺">
+                    </td>
+                    <td>3</td>
+                    <td>鯤島魚嶺</td>
+                    <td><img src="./img/4、鯤島魚嶺.jpg" alt="" /></td>
+                    <td>NT$0</td>
+                    <td>推薦</td>
+                    <td>虱目魚嶺 / 油蔥酥 / 高梁 / 沙巴雍</td>
+                </tr>
+                
+
+                <tr id="2">
+                    <td>
+                        <label for="menu"></label>
+                        <input type="checkbox"  name="menu" value="紫蘇梅雞肉卷沙拉">  
+                    </td>
+                    <td>1</td>
+                    <td>紫蘇梅雞肉卷沙拉</td>
+                    <td><img src="./img/2、紫蘇梅雞肉卷沙拉.jpg" alt="" /></td>
+                    <td>NT$0</td>
+                    <td>推薦</td>
+                    <td>雞腿肉 / 紫蘇梅 / 綜合生菜 / 時令水果</td>
+                
+                </tr>
+                <tr >
+                    <td><label for="menu">
+                    </label><input type="checkbox"  name="menu" value="松花炸肉蛋">
+                    </td>
+                    <td>2</td>
+                    <td>松花炸肉蛋</td>
+                    <td><img src="./img/3、松花炸肉蛋.jpg" alt="" /></td>
+                    <td>NT$0</td>
+                    <td>推薦</td>
+                    <td>皮蛋 / 洋蔥 / Balsamic / 豬絞肉（台灣）</td>
+                </tr>
+                <tr >
+                    <td>
+                        <label for="menu"></label>
+                        <input type="checkbox"  name="menu" value="鯤島魚嶺">
+                    </td>
+                    <td>3</td>
+                    <td>鯤島魚嶺</td>
+                    <td><img src="./img/4、鯤島魚嶺.jpg" alt="" /></td>
+                    <td>NT$0</td>
+                    <td>推薦</td>
+                    <td>虱目魚嶺 / 油蔥酥 / 高梁 / 沙巴雍</td>
+                </tr>
+                
+                <tr >
+                    <td>
+                        <label for="menu"></label>
+                        <input type="checkbox"  name="menu" value="鯤島魚嶺">
+                    </td>
+                    <td>3</td>
+                    <td>鯤島魚嶺</td>
+                    <td><img src="./img/4、鯤島魚嶺.jpg" alt="" /></td>
+                    <td>NT$0</td>
+                    <td>推薦</td>
+                    <td>虱目魚嶺 / 油蔥酥 / 高梁 / 沙巴雍</td>
+                </tr>
+                <tr >
+                    <td>
+                        <label for="menu"></label>
+                        <input type="checkbox"  name="menu" value="鯤島魚嶺">
+                    </td>
+                    <td>3</td>
+                    <td>鯤島魚嶺</td>
+                    <td><img src="./img/4、鯤島魚嶺.jpg" alt="" /></td>
+                    <td>NT$0</td>
+                    <td>推薦</td>
+                    <td>虱目魚嶺 / 油蔥酥 / 高梁 / 沙巴雍</td>
+                </tr>
+                <tr >
+                    <td>
+                        <label for="menu"></label>
+                        <input type="checkbox"  name="menu" value="鯤島魚嶺">
+                    </td>
+                    <td>3</td>
+                    <td>鯤島魚嶺</td>
+                    <td><img src="./img/4、鯤島魚嶺.jpg" alt="" /></td>
+                    <td>NT$0</td>
+                    <td>推薦</td>
+                    <td>虱目魚嶺 / 油蔥酥 / 高梁 / 沙巴雍</td>
+                </tr>
+                <tr >
+                    <td>
+                        <label for="menu"></label>
+                        <input type="checkbox"  name="menu" value="鯤島魚嶺">
+                    </td>
+                    <td>3</td>
+                    <td>鯤島魚嶺</td>
+                    <td><img src="./img/4、鯤島魚嶺.jpg" alt="" /></td>
+                    <td>NT$0</td>
+                    <td>推薦</td>
+                    <td>虱目魚嶺 / 油蔥酥 / 高梁 / 沙巴雍</td>
+                </tr>
+            </tbody>    
+        </table>
+        </form>
+        </div>
+        <div>
+            <ul  id="changePage">
+                <a href="" ><li class="pageNumber">前五頁</li></a>
+                <a href=""><li class="pageNumber">1</li></a>
+                <a href=""><li class="pageNumber">2</li></a>
+                <a href=""><li class="pageNumber">3</li></a>
+                <a href="" ><li class="pageNumber">後五頁</li></a>
+            </ul>
+        </div>
+    </section>
+</main>
+</div>
+</div>
+
+<script>
+    let buttons = document.querySelectorAll("button");
+    buttons.forEach(function (btn) {
+        btn.addEventListener("mouseenter", function () {
+            this.style.backgroundColor = "gray";
+            this.style.boxShadow="5px 5px 5px gray";
+            this.style.color = "white";
+            this.style.scale = "1.1";
+    });
+
+        btn.addEventListener("mouseleave", function () {
+            this.style.backgroundColor = "white";
+            this.style.boxShadow="none";
+            this.style.color = "black";
+            this.style.scale = "1";
+        });
+    });
+
+    document.getElementById("search").addEventListener("mouseenter", function () {
+        this.style.backgroundColor = "pink";
+        this.style.boxShadow="5px 5px 5px gray";
+        this.style.color = "black";
+        this.style.scale = "1.1";
+    });
+    document.getElementById("search").addEventListener("mouseleave", function () {
+        this.style.backgroundColor = "deepskyblue";
+        this.style.boxShadow="none";
+        this.style.color = "white";
+        this.style.scale = "1";
+    });
+</script>
+</body>
+
+</html>

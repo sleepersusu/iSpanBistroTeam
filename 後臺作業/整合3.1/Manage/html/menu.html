@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>memberManage</title>
+    <!-- icon套件start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- icon套件end -->
+
+    <!-- datatable套件start -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css"
+    />
+    <!-- datatable套件end -->
+
+    <link rel="stylesheet" href="../css/menu.css" />
+  </head>
+
+  <body>
+    <div id="page">
+      <!-- 側邊欄開始 -->
+      <nav class="sidebar">
+        <div id="logo"><img src="../共同img/LOGO.png" alt="商店logo" /></div>
+        <ul class="menu">
+          <li class="menuitem">
+            <a href="../index.html">
+              <i class="fa-solid fa-house" style="color: #ffffff"> </i>
+              <span>首頁</span>
+            </a>
+          </li>
+          <li class="menuitem">
+            <a href="../menu/menu01.html">
+              <i class="fa-solid fa-whiskey-glass"></i>
+              <span>商品管理</span>
+            </a>
+          </li>
+          <!--需要下拉的li-->
+          <li class="menuitem">
+            <a href="">
+              <i class="fa-solid fa-address-card"></i>
+              <span>會員管理</span>
+            </a>
+            <!--下拉選項位置-->
+            <ul class="dropdown">
+              <li>
+                <a href="./memberManage.html">
+                  <span>會員資訊</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <span>會員優惠</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menuitem">
+            <a href="../booking/booking.html">
+              <i class="fa-regular fa-calendar-check"></i>
+              <span>訂位管理</span>
+            </a>
+            <!--下拉選項內容開始-->
+            <ul class="dropdown">
+              <li><!--下拉選項內容--></li>
+            </ul>
+          </li>
+          <li class="menuitem">
+            <a href="#">
+              <i class="fa-regular fa-clipboard"></i>
+              <span>訂單管理</span>
+            </a>
+            <!--下拉選項內容開始-->
+            <ul class="dropdown">
+              <li><!--下拉選項內容--></li>
+            </ul>
+          </li>
+          <li class="menuitem">
+            <a href="#">
+              <i class="fa-regular fa-face-laugh-squint"></i>
+              <span>活動管理</span>
+            </a>
+            <!--下拉選項內容開始-->
+            <ul class="dropdown">
+              <li><!--下拉選項內容--></li>
+            </ul>
+          </li>
+          <li class="menuitem">
+            <a href="#">
+              <i class="fa-solid fa-cart-flatbed"></i>
+              <span>採購管理</span>
+            </a>
+            <!--下拉選項內容開始-->
+            <ul class="dropdown">
+              <li><!--下拉選項內容--></li>
+            </ul>
+          </li>
+          <li class="menuitem">
+            <a href="../comment/commentManage.html">
+              <i class="fa-solid fa-comment"></i>
+              <span>評論管理</span>
+            </a>
+            <!--下拉選項內容開始-->
+            <ul class="dropdown">
+              <li><!--下拉選項內容--></li>
+            </ul>
+          </li>
+          <li class="menuitem">
+            <a href="#">
+              <i class="fa-solid fa-user"></i>
+              <span>員工系統</span>
+            </a>
+            <!--下拉選項內容開始-->
+            <ul class="dropdown">
+              <li><!--下拉選項內容--></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- 側邊欄結束 -->
+
+      <div id="right">
+        <header>
+            <button>登出</button>
+        </header>
+        
+      <main>
+          <h1>商品管理</h1>
+          <section id="upSection">
+              <div id="workspace">
+                  <button class="dataButton"><i class="fa-solid fa-square-plus"></i>  增加資料</button>
+                  <button class="dataButton" ><i class="fa-solid fa-trash"></i>  刪除資料</button>
+                  <button class="dataButton"><i class="fa-solid fa-pen-to-square"></i>  修改資料</button>
+              </div>
+              
+          </section>
+
+          <section id="data">
+              
+            <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+              <select name="product_types" id="selectTypes">
+                  <option selected>選擇餐點樣式</option>
+                  <option>推薦</option>
+                  <option>主餐</option>
+                  <option>點心</option>
+                  <option>飲品</option>
+              </select>
+            </form>
+
+            
+            <div id="selected">
+                <div> 
+                    <span>已選取  : 0</span>
+                    <button>選取全部</button>
+                    <button>取消全選</button>
+                </div>
+            </div>
+                  
+            <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+              <div>
+                <table id="table">
+                  <caption>推薦</caption>
+                  <thead>
+                    <tr>
+                        <div><th >選項</th></div>
+                        <div><th >ID</th></div>
+                        <div><th >名稱</th></div>
+                        <div><th >圖片</th></div>
+                        <div><th >價格</th></div>
+                        <div><th >分類</th></div>
+                        <div><th  >描述</th></div>         
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr id="1">
+                        <td >
+                            <label for="menu"></label>
+                            <input type="checkbox"  name="menu" value="紫蘇梅雞肉卷沙拉">  
+                        </td>
+                        <td>1</td>
+                        <td>紫蘇梅雞肉卷沙拉</td>
+                        <td><img src="./img/2、紫蘇梅雞肉卷沙拉.jpg" alt="" /></td>
+                        <td>NT$0</td>
+                        <td>推薦</td>
+                        <td>雞腿肉 / 紫蘇梅 / 綜合生菜 / 時令水果</td>
+                    
+                    </tr>
+                    <tr>
+                        <td><label for="menu">
+                        </label><input type="checkbox"  name="menu" value="松花炸肉蛋">
+                        </td>
+                        <td>2</td>
+                        <td>松花炸肉蛋</td>
+                        <td><img src="./img/3、松花炸肉蛋.jpg" alt="" /></td>
+                        <td>NT$0</td>
+                        <td>推薦</td>
+                        <td>皮蛋 / 洋蔥 / Balsamic / 豬絞肉（台灣）</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="menu"></label>
+                            <input type="checkbox"  name="menu" value="鯤島魚嶺">
+                        </td>
+                        <td>3</td>
+                        <td>鯤島魚嶺</td>
+                        <td><img src="./img/4、鯤島魚嶺.jpg" alt="" /></td>
+                        <td>NT$0</td>
+                        <td>推薦</td>
+                        <td>虱目魚嶺 / 油蔥酥 / 高梁 / 沙巴雍</td>
+                    </tr>
+                    
+
+                    <tr id="2">
+                        <td>
+                            <label for="menu"></label>
+                            <input type="checkbox"  name="menu" value="紫蘇梅雞肉卷沙拉">  
+                        </td>
+                        <td>1</td>
+                        <td>紫蘇梅雞肉卷沙拉</td>
+                        <td><img src="./img/2、紫蘇梅雞肉卷沙拉.jpg" alt="" /></td>
+                        <td>NT$0</td>
+                        <td>推薦</td>
+                        <td>雞腿肉 / 紫蘇梅 / 綜合生菜 / 時令水果</td>
+                    
+                    </tr>
+                    <tr >
+                        <td><label for="menu">
+                        </label><input type="checkbox"  name="menu" value="松花炸肉蛋">
+                        </td>
+                        <td>2</td>
+                        <td>松花炸肉蛋</td>
+                        <td><img src="./img/3、松花炸肉蛋.jpg" alt="" /></td>
+                        <td>NT$0</td>
+                        <td>推薦</td>
+                        <td>皮蛋 / 洋蔥 / Balsamic / 豬絞肉（台灣）</td>
+                    </tr>
+                    <tr >
+                        <td>
+                            <label for="menu"></label>
+                            <input type="checkbox"  name="menu" value="鯤島魚嶺">
+                        </td>
+                        <td>3</td>
+                        <td>鯤島魚嶺</td>
+                        <td><img src="./img/4、鯤島魚嶺.jpg" alt="" /></td>
+                        <td>NT$0</td>
+                        <td>推薦</td>
+                        <td>虱目魚嶺 / 油蔥酥 / 高梁 / 沙巴雍</td>
+                    </tr>
+                    
+                    <tr >
+                        <td>
+                            <label for="menu"></label>
+                            <input type="checkbox"  name="menu" value="鯤島魚嶺">
+                        </td>
+                        <td>3</td>
+                        <td>鯤島魚嶺</td>
+                        <td><img src="./img/4、鯤島魚嶺.jpg" alt="" /></td>
+                        <td>NT$0</td>
+                        <td>推薦</td>
+                        <td>虱目魚嶺 / 油蔥酥 / 高梁 / 沙巴雍</td>
+                    </tr>
+                    <tr >
+                        <td>
+                            <label for="menu"></label>
+                            <input type="checkbox"  name="menu" value="鯤島魚嶺">
+                        </td>
+                        <td>3</td>
+                        <td>鯤島魚嶺</td>
+                        <td><img src="./img/4、鯤島魚嶺.jpg" alt="" /></td>
+                        <td>NT$0</td>
+                        <td>推薦</td>
+                        <td>虱目魚嶺 / 油蔥酥 / 高梁 / 沙巴雍</td>
+                    </tr>
+                    <tr >
+                        <td>
+                            <label for="menu"></label>
+                            <input type="checkbox"  name="menu" value="鯤島魚嶺">
+                        </td>
+                        <td>3</td>
+                        <td>鯤島魚嶺</td>
+                        <td><img src="./img/4、鯤島魚嶺.jpg" alt="" /></td>
+                        <td>NT$0</td>
+                        <td>推薦</td>
+                        <td>虱目魚嶺 / 油蔥酥 / 高梁 / 沙巴雍</td>
+                    </tr>
+                    <tr >
+                        <td>
+                            <label for="menu"></label>
+                            <input type="checkbox"  name="menu" value="鯤島魚嶺">
+                        </td>
+                        <td>3</td>
+                        <td>鯤島魚嶺</td>
+                        <td><img src="./img/4、鯤島魚嶺.jpg" alt="" /></td>
+                        <td>NT$0</td>
+                        <td>推薦</td>
+                        <td>虱目魚嶺 / 油蔥酥 / 高梁 / 沙巴雍</td>
+                    </tr>
+                  </tbody>    
+                </table>
+                
+              </div>
+            </form>
+          </section>
+          <footer class="mainfooter">
+            <hr />
+            <span>Made by TeamWork</span>
+          </footer>
+        </main>
+      </div>
+    </div>
+
+    <!-- table 套件start -->
+    <script src="../api/jquery/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+
+    <script>
+      $("#table").DataTable({
+        scrollY: "250px", // 設定表格高度
+        scrollX: "90%",
+
+        columnDefs: [
+          {
+            targets: 6, //第幾格欄位 第1欄的值是0
+            render: DataTable.render.date() //定義成日期格式
+          }
+        ],
+
+        
+
+        // 中文化
+      //   language: {
+      //     url: "Manage/api/datatable/zh-HANT.json"},
+
+          
+
+      //   //全選按鈕
+      // $("selectAll").click,
+      //   function () {
+      //     $("check");
+      //   };
+
+      })
+
+      
+    </script>
+    <!-- table 套件END -->
+
+    <script>
+      let buttons = document.querySelectorAll("button");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("mouseenter", function () {
+          this.style.backgroundColor = "gray";
+          this.style.boxShadow = "5px 5px 5px gray";
+          this.style.color = "white";
+          this.style.scale = "1.1";
+        });
+
+        btn.addEventListener("mouseleave", function () {
+          this.style.backgroundColor = "white";
+          this.style.boxShadow = "none";
+          this.style.color = "black";
+          this.style.scale = "1";
+        });
+      });
+
+      document
+        .getElementById("search")
+        .addEventListener("mouseenter", function () {
+          this.style.backgroundColor = "pink";
+          this.style.boxShadow = "5px 5px 5px gray";
+          this.style.color = "black";
+          this.style.scale = "1.1";
+        });
+      document
+        .getElementById("search")
+        .addEventListener("mouseleave", function () {
+          this.style.backgroundColor = "deepskyblue";
+          this.style.boxShadow = "none";
+          this.style.color = "white";
+          this.style.scale = "1";
+        });
+    </script>
+  </body>
+</html>

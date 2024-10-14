@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/booking.css">
+</head>
+
+<body>
+    <div id=page>
+        <nav>
+            <div id="logo"><img src="../共同img/LOGO.png" alt="商店logo" /></div>
+            <ul>
+                <a href="../index/index.html"><li><i class="fa-solid fa-house" style="color: #ffffff"></i> 首頁</li></a>
+                <a href="../menu/menu01.html"><li><i class="fa-solid fa-whiskey-glass"></i> 商品管理</li></a>
+                <a href="../member/memberManage.html"><li><i class="fa-solid fa-address-card"></i> 會員管理</li></a>
+                <a href="#"><li><i class="fa-regular fa-calendar-check"></i> 訂位管理</li></a>
+                <a href=""><li><i class="fa-regular fa-clipboard"></i> 訂單管理</li></a>
+                <a href=""><li><i class="fa-regular fa-face-laugh-squint"></i> 活動管理</li></a>
+                <a href=""><li><i class="fa-solid fa-cart-flatbed"></i> 採購管理</li></a>
+                <a href="../comment/commentManage.html"><li><i class="fa-solid fa-comment"></i> 評論管理</li></a>
+                <a href=""><li><i class="fa-solid fa-user"></i>管理者系統</li></a>
+            </ul>
+        </nav>
+
+        <div id="right">
+            <header>
+              <button>登出</button>
+            </header>
+    
+            <main>
+              <h1>訂位管理</h1>
+              <section id="upSection">
+                <div id="workspace">
+                  <button class="dataButton">
+                    <i class="fa-solid fa-square-plus"></i> 增加資料
+                  </button>
+                  <button class="dataButton">
+                    <i class="fa-solid fa-trash"></i> 刪除資料
+                  </button>
+                  <button class="dataButton">
+                    <i class="fa-solid fa-pen-to-square"></i> 修改資料
+                  </button>
+                </div>
+    
+                <h3 id="searchTitle">搜尋</h3>
+                <div id="searchBar">
+                  <input type="text" placeholder="請輸入內容" id="searchinput" />
+                  <button id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i> 搜尋
+                  </button>
+                </div>
+              </section>
+    
+              <div id="selected">
+                <div>
+                  <span>已選取 : 0</span>
+                  <button>選取全部</button>
+                  <button>取消全選</button>
+                  <h3>所有訂位</h3>
+                </div>
+              </div>
+              <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+                <div>
+                    <table>
+                        <caption>xxxx</caption>
+                            <thead>    
+                                <tr>
+                                    <th>選項</th>
+                                    <th>姓名</th>
+                                    <th>會員</th>
+                                    <th>電話</th>
+                                    <th>性別</th>
+                                    <th>訂位人數</th>
+                                    <th>訂位日期</th>
+                                    <th>定位時間</th>
+                                    <th>桌號</th>
+                                    <th>建立日期</th>
+                                    
+                                </tr>
+                            </thead>
+                            
+                            <tbody id="tbody">
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="comment" value="" />
+                                    </td>
+                                    <td>賴清德</td>
+                                    <td>null</td>
+                                    <td>0978564987</td>
+                                    <td>男</td>
+                                    <td>4</td>
+                                    <td>2024/10/10</td>
+                                    <td>15:30</td>
+                                    <td>6</td>
+                                    <td>2024/05/07 18:31</td>
+                                </tr>
+                                <tr>
+                                      <td>
+                                        <input type="checkbox" name="comment" value="" />
+                                      </td>
+                                      <td>柯文哲</td>
+                                      <td>null</td>
+                                      <td>0978874963</td>
+                                      <td>男</td>
+                                      <td>1</td>
+                                      <td>2024/12/11</td>
+                                      <td>11:00</td>
+                                      <td>9</td>
+                                      <td>2024/04/013 22:55</td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                        <input type="checkbox" name="comment" value="" />
+                                      </td>
+                                      <td>林小姐</td>
+                                      <td>023</td>
+                                      <td>052277192</td>
+                                      <td>女</td>
+                                      <td>1</td>
+                                      <td>2025/03/09</td>
+                                      <td>17:00</td>
+                                      <td>1</td>
+                                      <td>2024/011/12 22:44</td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                        <input type="checkbox" name="comment" value="" />
+                                      </td>
+                                      <td>侯友宜</td>
+                                      <td>null</td>
+                                      <td>0978564987</td>
+                                      <td>男</td>
+                                      <td>4</td>
+                                      <td>2024/10/10</td>
+                                      <td>15:30</td>
+                                      <td>6</td>
+                                      <td>2024/05/07 18:31</td>
+                                  </tr>
+                                  <tr>
+                                      <td>
+                                        <input type="checkbox" name="comment" value="" />
+                                      </td>
+                                      <td>蘇貞昌</td>
+                                      <td>null</td>
+                                      <td>0978564987</td>
+                                      <td>男</td>
+                                      <td>4</td>
+                                      <td>2024/10/10</td>
+                                      <td>15:30</td>
+                                      <td>6</td>
+                                      <td>2024/05/07 18:31</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+
+                          <div>
+                            <ul  id="changePage">
+                                <a href="" ><li class="pageNumber">前五頁</li></a>
+                                <a href=""><li class="pageNumber">1</li></a>
+                                <a href=""><li class="pageNumber">2</li></a>
+                                <a href=""><li class="pageNumber">3</li></a>
+                                <a href="" ><li class="pageNumber">後五頁</li></a>
+                            </ul>
+                        </div>
+        
+        
+        
+        </div><!--資料區-->
+      </main> <!-- 按鈕區+搜尋區+table 放置區-->
+  </div><!-- 整個右半部-->
+
+
+</div><!-- 整個版面-->
+
+    <script>
+      let buttons = document.querySelectorAll("button");
+      buttons.forEach(function (btn) {
+        btn.addEventListener("mouseenter", function () {
+          this.style.backgroundColor = "gray";
+          this.style.boxShadow="5px 5px 5px gray";
+          this.style.color = "white";
+          this.style.scale = "1.1";
+        });
+
+        btn.addEventListener("mouseleave", function () {
+          this.style.backgroundColor = "white";
+          this.style.boxShadow="none";
+          this.style.color = "black";
+          this.style.scale = "1";
+        });
+      });
+
+      document
+        .getElementById("search")
+        .addEventListener("mouseenter", function () {
+          this.style.backgroundColor = "pink";
+          this.style.boxShadow="5px 5px 5px gray";
+          this.style.color = "black";
+          this.style.scale = "1.1";
+        });
+      document
+        .getElementById("search")
+        .addEventListener("mouseleave", function () {
+          this.style.backgroundColor = "deepskyblue";
+          this.style.boxShadow="none";
+          this.style.color = "white";
+          this.style.scale = "1";
+        });
+    </script>
+</body>
+
+</html>

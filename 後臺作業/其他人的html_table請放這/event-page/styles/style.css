@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to left, #56ccf2, #2f80ed);
+  font-family: "Noto Sans TC", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main {
+  background-color: rgb(237, 237, 237);
+  border-radius: 30px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  width: 75vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+body main .title {
+  height: 10%;
+  width: 100%;
+  line-height: 6.5rem;
+}
+body main .addBtn {
+  border: 2px solid rgb(215, 215, 215);
+  border-bottom: none;
+  background-color: white;
+  height: 10%;
+  width: 100%;
+  padding-left: 1.25rem;
+  line-height: 5rem;
+}
+body main .addBtn a {
+  background: #0071e3;
+  color: white;
+  text-decoration: none;
+  padding: 0.4rem 1.5rem;
+}
+body main .addBtn a:hover {
+  background: #3388dd;
+}
+body main .search {
+  border: 2px solid rgb(215, 215, 215);
+  background-color: white;
+  height: 11%;
+  width: 100%;
+  padding-left: 1.1rem;
+  margin-bottom: 2rem;
+}
+body main .search .search-box input {
+  outline: none;
+  border: 2px solid rgb(215, 215, 215);
+  margin-top: 0.5rem;
+  margin-right: 0.3rem;
+  height: 35px;
+  width: 450px;
+  padding-left: 10px;
+}
+body main .search .search-box input::-moz-placeholder {
+  font-size: 1rem;
+}
+body main .search .search-box input::placeholder {
+  font-size: 1rem;
+}
+body main .search .search-box input:focus {
+  border: 1.5px solid black;
+}
+body main .search .search-box a {
+  background: #0071e3;
+  color: white;
+  text-decoration: none;
+  padding: 0.4rem 1.5rem;
+}
+body main .search .search-box a:hover {
+  background: #3388dd;
+}
+body main table {
+  border: 2px solid rgb(215, 215, 215);
+  background: white;
+  height: 60%;
+  width: 100%;
+  padding: 0 1.25rem;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+body main table thead tr {
+  text-align: justify;
+}
+body main table thead tr th {
+  height: 50px;
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+body main table tbody tr {
+  text-align: justify;
+}
+body main table tbody tr td {
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+body main table tbody tr td a {
+  text-decoration: none;
+}
+body main table tbody tr td a:hover {
+  text-decoration: underline;
+}
+body main table tbody tr td button {
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+body main table tbody tr #true {
+  font-size: 14px;
+  background-color: rgb(2, 182, 17);
+  padding: 0.25rem 0.75rem;
+  color: white;
+  border-radius: 5px;
+}
+body main table tbody tr #false {
+  font-size: 14px;
+  background-color: rgb(225, 2, 2);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 5px;
+}
+body main table tbody tr:last-child td {
+  border-bottom: none;
+}
+body .modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+body .modal .modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px 40px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  overflow: scroll;
+}
+body .modal .modal-content h2 {
+  margin-bottom: 1rem;
+}
+body .modal .modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+body .modal .modal-content form input,
+body .modal .modal-content form textarea {
+  margin-bottom: 16px;
+  border-radius: 30px;
+  border: 2px solid rgb(215, 215, 215);
+  padding: 5px 10px;
+  font-size: 0.9rem;
+}
+body .modal .modal-content form textarea {
+  width: 100%;
+  height: 200px;
+  overflow: auto;
+  resize: none;
+}
+body .modal .modal-content form input {
+  height: 30px;
+}
+body .modal .modal-content form button {
+  margin-top: 0.5rem;
+  align-self: center;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+}
+body .modal .modal-content .close {
+  float: right;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+body .modal .modal-content .close:hover, body .modal .modal-content .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
